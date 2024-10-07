@@ -1,5 +1,3 @@
-package org.example.sample;
-
 /**
  * CoffeeAddMilkDecorator 具体的装饰类 加入牛奶的装饰类
  */

@@ -4,12 +4,12 @@
 
 装饰器设计模式的组成元素主要有四个
 
-| 元素                 | 名称     | 类型             |
-|--------------------|--------|----------------|
-| Component          | 抽象组件   | interface      |
-| concrete component | 具体组件   | class          |
-| Decorator          | 抽象装饰器  | abstract class |
-| concrete decorator | 装饰器实体类 | class          |
+| 元素                 | 名称     | 类型        |
+|--------------------|--------|-----------|
+| Component          | 抽象组件   | interface |
+| concrete component | 具体组件   | class     |
+| Decorator          | 抽象装饰器  | interface |
+| concrete decorator | 装饰器实体类 | class     |
 
 &nbsp;&nbsp; `其中Component` 是装饰器模式中的顶级接口，`concrete component`、`Decorator`、`concrete decorator` 元素都要实现
 `Component` 接口。

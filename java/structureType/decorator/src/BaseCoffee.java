@@ -1,5 +1,3 @@
-package org.example.sample;
-
 public class BaseCoffee implements CoffeeComponent{
     @Override
     public String getDescription() {

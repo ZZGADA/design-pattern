@@ -1,9 +1,9 @@
-package org.example.sample;
+
 
 /**
  * CoffeeAddChocolateDecorator 具体的装饰类 加入巧克力的装饰类
  */
-public class CoffeeAddChocolateDecorator extends CoffeeBaseDecorator{
+public class CoffeeAddChocolateDecorator extends CoffeeBaseDecorator {
     public CoffeeAddChocolateDecorator(CoffeeComponent coffee) {
         super(coffee);
     }

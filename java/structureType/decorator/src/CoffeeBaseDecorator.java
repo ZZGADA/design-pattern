@@ -1,5 +1,3 @@
-package org.example.sample;
-
 /**
  * CoffeeBaseDecorator 抽象的基类装饰器 作为基类 将被具体的扩展子类继承
  */
