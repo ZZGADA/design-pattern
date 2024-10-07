@@ -1,6 +1,8 @@
 package main
 
-import "bridge"
+import (
+	"bridge"
+)
 
 func main() {
 	cpuIntel := bridge.NewIntelCPU()
@@ -20,5 +22,4 @@ func main() {
 	for i := 0; i < 4; i++ {
 		slice[i].IO("执行")
 	}
-
 }
