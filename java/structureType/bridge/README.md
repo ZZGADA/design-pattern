@@ -12,6 +12,8 @@
 | ImplementorCPU         | 实现类接口        | interface      |
 | ConcreteImplementor | 具体实现类        | class          |
 
+
+### 说明
 我知道这里你看不懂，但是我做一个具体的解释 你就懂啦。
 
 首先我们更换一个定义，RefinedAbstraction大众解释为扩充抽象类，但是你看的懂吗？
