@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/structureType/bridge/bridge.iml" filepath="$PROJECT_DIR$/structureType/bridge/bridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/behaviourType/client/client.iml" filepath="$PROJECT_DIR$/behaviourType/client/client.iml" />
       <module fileurl="file://$PROJECT_DIR$/structureType/decorator/decorator.iml" filepath="$PROJECT_DIR$/structureType/decorator/decorator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/structure/flyWeight/flyWeight.iml" filepath="$PROJECT_DIR$/structure/flyWeight/flyWeight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/structureType/flyWeight/flyWeight.iml" filepath="$PROJECT_DIR$/structureType/flyWeight/flyWeight.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java.iml" filepath="$PROJECT_DIR$/.idea/java.iml" />
     </modules>
   </component>
