@@ -17,5 +17,4 @@ func main() {
 	remoter.PushButton() // LightOn
 	remoter.PushButton() // LightOff
 	remoter.PushButton() // LightOn
-
 }

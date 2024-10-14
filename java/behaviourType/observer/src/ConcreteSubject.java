@@ -3,6 +3,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ConcreteSubject implements Subject {
+    // 注意这里⚠️：我们一般通过代理的形式在notifyObservers方法中实例对象然后销毁
+    // 我们的订阅者 并不需要一个只持久的对象
     private Map<Integer, Observer> map = new HashMap<>();
 
     /**
