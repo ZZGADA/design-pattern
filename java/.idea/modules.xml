@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/java.iml" filepath="$PROJECT_DIR$/.idea/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/behaviourType/mediator/mediator.iml" filepath="$PROJECT_DIR$/behaviourType/mediator/mediator.iml" />
       <module fileurl="file://$PROJECT_DIR$/behaviourType/observer/observer.iml" filepath="$PROJECT_DIR$/behaviourType/observer/observer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/structureType/proxy/proxy.iml" filepath="$PROJECT_DIR$/structureType/proxy/proxy.iml" />
       <module fileurl="file://$PROJECT_DIR$/behaviourType/state/state.iml" filepath="$PROJECT_DIR$/behaviourType/state/state.iml" />
       <module fileurl="file://$PROJECT_DIR$/behaviourType/strategy/strategy.iml" filepath="$PROJECT_DIR$/behaviourType/strategy/strategy.iml" />
     </modules>

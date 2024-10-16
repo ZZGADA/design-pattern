@@ -1,4 +1,11 @@
-package PACKAGE_NAME;
+public class RealSubject implements Subject {
+    @Override
+    public void say() {
+        System.out.println("it is say function");
+    }
 
-public class RealSubject {
+    @Override
+    public void run() {
+        System.out.println("it is run function");
+    }
 }
