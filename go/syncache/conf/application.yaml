@@ -1,0 +1,22 @@
+server:
+  name: syn_cache
+
+db:
+  username: root
+  password: zZ-szshyjbz16D
+  database: ssm_db
+  host: 8.130.14.29
+  port: 33170
+
+redis:
+  password: zZ-szshyjbz16D
+  host: 8.130.14.29
+  port: 36689
+  database: 0
+  maxIdle: 100  #连接池最大空闲数
+  minIdle: 0  #连接池最小空闲数
+  max_active_conns: 100   #连接池最大连接数
+  maxWaitMillis: 500  #这是当连接池耗尽时，调用者最大等待时间为500毫秒
+  testOnBorrow: false   #这是从连接池获取连接时，是否进行有效性检查设置为false
+  testOnReturn: true  #这是向连接池返回连接时，是否进行有效性检查设置为true。
+
