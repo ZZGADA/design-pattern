@@ -2,9 +2,13 @@ package models
 
 import (
 	"gorm.io/gorm"
+	"sync"
+	"syncache/conf"
+	"syncache/internel/client"
 )
 
 type LabelTreeMapper struct {
+	sync.Once
 	client *gorm.DB
 }
 
@@ -21,9 +25,17 @@ func init() {
 	labelTreeDao = &LabelTreeMapper{}
 }
 
-func NewLabelTreeDao(db *gorm.DB) *LabelTreeMapper {
-	labelTreeDao.client = db
-	return labelTreeDao
+// init 实例化对象 获取mysql客户端
+func (lt *LabelTreeMapper) init() *LabelTreeMapper {
+	lt.Do(func() {
+		lt.client = client.MysqlInstance.Get(conf.Dft.Get())
+	})
+	return lt
+}
+
+// NewLabelTreeDao 初始化
+func NewLabelTreeDao() *LabelTreeMapper {
+	return labelTreeDao.init()
 }
 
 // TableName 表名
@@ -38,4 +50,18 @@ func (lt *LabelTreeMapper) GetAllLabelTree() []LabelTree {
 
 	lt.client.Where("id != ?", rootId).Find(&labelTrees)
 	return labelTrees
+}
+
+// GetById GetSpecificLabelTreeParentById 根据id查询指定一个label tree的父级信息
+func (lt *LabelTreeMapper) GetById(labelTreeId int) LabelTree {
+	var labelTree LabelTree
+
+	lt.client.Where("id != ?", labelTreeId).Find(&labelTree)
+	return labelTree
+}
+
+// UpdateLabelName 更新label体系的名称
+func (lt *LabelTreeMapper) UpdateLabelName(labelTreeName string, labelTreeId int) error {
+	result := lt.client.Model(&LabelTree{}).Where("id != ?", labelTreeId).Updates(LabelTree{Name: labelTreeName})
+	return result.Error
 }

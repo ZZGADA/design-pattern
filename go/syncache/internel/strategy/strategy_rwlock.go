@@ -5,11 +5,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/redis/go-redis/v9"
-	"gorm.io/gorm"
 	"log"
 	"sync"
+	"syncache/conf"
 	"syncache/internel/client"
 	"syncache/internel/models"
+	"syncache/internel/service"
+	"syncache/internel/service/impl"
 	"syncache/internel/template"
 	"syncache/internel/utils"
 	"time"
@@ -26,10 +28,10 @@ type ReadWriteLockStrategy struct {
 	sync.Once
 	Context Context
 	BaseStrategy
-	mysqlClient *gorm.DB
 	redisClient *redis.Client
 
-	labelTreeDao *models.LabelTreeMapper
+	labelTreeDao     *models.LabelTreeMapper
+	labelTreeService service.LabelTreeService
 }
 
 // NewReadWriteLockStrategy 初始化对象
@@ -43,10 +45,9 @@ func NewReadWriteLockStrategy(context Context) *ReadWriteLockStrategy {
 func (rws *ReadWriteLockStrategy) init() {
 	rws.Do(func() {
 		log.Println("懒加载执行依赖注入～ ，单例加载")
-		rws.mysqlClient = client.MysqlInstance.Get(rws.Context.config)
-		rws.redisClient = client.RedisInstance.Get(rws.Context.config)
+		rws.redisClient = client.RedisInstance.Get(conf.Dft.Get())
 
-		rws.labelTreeDao = models.NewLabelTreeDao(rws.mysqlClient)
+		rws.labelTreeService = impl.NewLabelTreeService()
 	})
 }
 
@@ -55,36 +56,33 @@ func (rws *ReadWriteLockStrategy) run() {
 	log.Println("单例模式（读写锁实现）协程号：", utils.GetGoroutineID())
 	log.Println("redis key upload start ")
 
-	labelTrees := rws.labelTreeDao.GetAllLabelTree()
-	if len(labelTrees) != 0 {
-		redisNodeIdToParents := "%s:%d"
-		redisNodeIdToParentsAll := "%s:all"
-		mapIdToParents, mapIdToLabelTree := rws.mergeLabelTree(labelTrees)
+	redisNodeIdToParents := "%s:%d"
+	redisNodeIdToParentsAll := "%s:all"
+	mapIdToParents, mapIdToLabelTree := rws.labelTreeService.MergeLabelTree()
 
-		// 遍历插入数据
-		for nodeId, parentIds := range mapIdToParents {
-			redisLabelTreeDataTemp := template.NewRedisMapLabelTreeDataTemp(mapIdToLabelTree[nodeId].Name, parentIds)
-			jsonData, err := json.Marshal(redisLabelTreeDataTemp)
-			if err != nil {
-				log.Println(err)
-			}
-
-			if errRedis := rws.redisClient.SetEx(context.Background(), fmt.Sprintf(redisNodeIdToParents, labelTreeKey, nodeId), string(jsonData), time.Minute*5).Err(); errRedis != nil {
-				// 如果err 不为空 那么就要重试
-				log.Println("failed!!")
-			}
-		}
-
-		jsonMapIdToParents, err := json.Marshal(mapIdToParents)
+	// 遍历插入数据
+	for nodeId, parentIds := range mapIdToParents {
+		redisLabelTreeDataTemp := template.NewRedisMapLabelTreeDataTemp(mapIdToLabelTree[nodeId].Name, parentIds)
+		jsonData, err := json.Marshal(redisLabelTreeDataTemp)
 		if err != nil {
 			log.Println(err)
 		}
 
-		// 全量插入
-		if errRedis := rws.redisClient.SetEx(context.Background(), fmt.Sprintf(redisNodeIdToParentsAll, labelTreeKey), string(jsonMapIdToParents), time.Minute*5).Err(); errRedis != nil {
+		if errRedis := rws.redisClient.SetEx(context.Background(), fmt.Sprintf(redisNodeIdToParents, template.RedisKeyLabelTree, nodeId), string(jsonData), time.Minute*5).Err(); errRedis != nil {
 			// 如果err 不为空 那么就要重试
 			log.Println("failed!!")
 		}
+	}
+
+	jsonMapIdToParents, err := json.Marshal(mapIdToParents)
+	if err != nil {
+		log.Println(err)
+	}
+
+	// 全量插入
+	if errRedis := rws.redisClient.SetEx(context.Background(), fmt.Sprintf(redisNodeIdToParentsAll, template.RedisKeyLabelTree), string(jsonMapIdToParents), time.Minute*5).Err(); errRedis != nil {
+		// 如果err 不为空 那么就要重试
+		log.Println("failed!!")
 	}
 
 	log.Println("redis key 上传成功🏅")
