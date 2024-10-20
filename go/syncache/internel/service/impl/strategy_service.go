@@ -2,7 +2,7 @@ package impl
 
 import (
 	"context"
-	"errors"
+	"encoding/json"
 	"fmt"
 	"github.com/redis/go-redis/v9"
 	"log"
@@ -12,13 +12,16 @@ import (
 	"syncache/internel/models"
 	"syncache/internel/service"
 	"syncache/internel/template"
+	"time"
 )
 
 type StrategyService struct {
 	sync.Once
+	sync.Mutex
 
-	labelTreeDao *models.LabelTreeMapper
-	redisClient  *redis.Client
+	labelTreeDao     *models.LabelTreeMapper
+	redisClient      *redis.Client
+	labelTreeService service.LabelTreeService
 }
 
 var strategyService *StrategyService
@@ -34,6 +37,7 @@ func (s *StrategyService) init() service.StrategyService {
 	s.Do(func() {
 		s.labelTreeDao = models.NewLabelTreeDao()
 		s.redisClient = client.RedisInstance.Get(conf.Dft.Get())
+		s.labelTreeService = NewLabelTreeService()
 	})
 	return s
 }
@@ -43,27 +47,55 @@ func NewStrategyService() service.StrategyService {
 	return strategyService.init()
 }
 
-// GetSpecificLabelTreeInfoById 获取一个体系标签的信息
-func (s *StrategyService) GetSpecificLabelTreeInfoById(labelTreeId int) string {
-	labelTreeKey := fmt.Sprintf("%s:%d", template.RedisKeyLabelTree, labelTreeId)
+// PushSpecificLabelTreeInfoById 更新对应label和其子对象的的缓存
+func (s *StrategyService) PushSpecificLabelTreeInfoById(labelTreeId int) (string, error) {
+	log.Println("redis key upload start ")
+	redisNodeIdToParents := "%s:%d"
+	mapIdToParentsNeedPush, mapIdToLabelTree := s.labelTreeService.MergeLabelTreeOne(labelTreeId)
 
-	// 1. 优先获取缓存
-	val, err := s.redisClient.Get(context.Background(), labelTreeKey).Result()
-	if errors.Is(err, redis.Nil) {
-		// key 不存在 需要从DB中查value
+	// 遍历插入数据
+	for nodeId, parentIds := range mapIdToParentsNeedPush {
+		redisLabelTreeDataTemp := template.NewRedisMapLabelTreeDataTemp(mapIdToLabelTree[nodeId].Name, parentIds)
+		jsonData, err := json.Marshal(redisLabelTreeDataTemp)
+		if err != nil {
+			log.Println(err)
+			return "", err
+		}
 
-		return ""
+		if err := s.redisClient.SetEx(context.Background(), fmt.Sprintf(redisNodeIdToParents, template.RedisKeyLabelTree, nodeId), string(jsonData), time.Second*60).Err(); err != nil {
+			// 如果err 不为空 那么就要重试
+			log.Println(err)
+			return "", err
+		}
 	}
+	log.Println("redis 当前 key的所有变化 上传成功🏅")
+	return mapIdToParentsNeedPush[labelTreeId], nil
+}
 
-	// 1.2. 查缓存报错
+// PushAllLabelTreeAllParent 全量插入
+func (s *StrategyService) PushAllLabelTreeAllParent() map[int]string {
+	redisNodeIdToParentsAll := "%s:all"
+	mapIdToParentsAll, _ := s.labelTreeService.MergeLabelTreeAll()
+
+	// 转json
+	jsonMapIdToParents, err := json.Marshal(mapIdToParentsAll)
 	if err != nil {
-		// redis 报错了
-		log.Printf("redis获取的key报错，error：%#v\n", err)
-		return "业务繁忙，稍等一下～"
+		log.Println(err)
 	}
 
-	// 2. 缓存存在就直接返回
-	return val
+	// 全量插入
+	if errRedis := s.redisClient.SetEx(context.Background(), fmt.Sprintf(redisNodeIdToParentsAll, template.RedisKeyLabelTree), string(jsonMapIdToParents), time.Minute*5).Err(); errRedis != nil {
+		// 如果err 不为空 那么就要重试
+		log.Println("failed!!")
+	}
+
+	log.Println("redis 全量 key 上传成功🏅")
+	return mapIdToParentsAll
+}
+
+// pushCacheToRedis 将缓存推入redis
+func (s *StrategyService) pushCacheToRedis() {
+
 }
 
 func (s *StrategyService) UpdateSpecificLabelTreeParentById(labelTreeId int) {
