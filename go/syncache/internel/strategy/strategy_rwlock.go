@@ -80,9 +80,6 @@ func (rws *ReadWriteLockStrategy) run() {
 			}
 			fmt.Println("--------------------------------------------------------------------")
 		}()
-		//if i%100 == 0 {
-		//	time.Sleep(time.Millisecond * 80)
-		//}
 	}
 	wg.Wait()
 	fmt.Println("final+++++++++ =====> ", rws.final, "========> ", count)
