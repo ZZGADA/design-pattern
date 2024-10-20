@@ -31,11 +31,11 @@ func (LabelTree) TableName() string {
 	return "label_tree"
 }
 
-// getAllLabelTree 获取全量的体系树
+// GetAllLabelTree 获取全量的体系树
 func (lt *LabelTreeMapper) GetAllLabelTree() []LabelTree {
 	const rootId int = 1
 	var labelTrees []LabelTree
+
 	lt.client.Where("id != ?", rootId).Find(&labelTrees)
 	return labelTrees
-
 }

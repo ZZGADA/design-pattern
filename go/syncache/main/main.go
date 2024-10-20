@@ -10,24 +10,19 @@ package main
 
 import (
 	strategy "syncache/internel/strategy"
-	"time"
 )
 
 var (
-	mqAsyUpdateStrategy       strategy.Strategy
 	rwLockStrategy            strategy.Strategy
+	mqAsyUpdateStrategy       strategy.Strategy
 	delayDoubleDeleteStrategy strategy.Strategy
 )
 
 func main() {
 	// 三种数据库同步redis缓存的形式
 	context := strategy.NewContext()
-	mqAsyUpdateStrategy = &strategy.ReadWriteLockStrategy{Context: context}
+	rwLockStrategy = strategy.NewReadWriteLockStrategy(context)
 
-	context.SetStrategy(mqAsyUpdateStrategy)
-	for i := 0; i < 3; i++ {
-		context.Start()
-	}
-
-	time.Sleep(10 * time.Second)
+	context.SetStrategy(rwLockStrategy)
+	context.Start()
 }
