@@ -8,8 +8,8 @@ type RedisLabelTreeDataTemp struct {
 
 func NewRedisMapLabelTreeDataTemp(name, parentIds string) map[string]string {
 	return map[string]string{
-		name:      name,
-		parentIds: parentIds,
+		"name":      name,
+		"parentIds": parentIds,
 	}
 }
 

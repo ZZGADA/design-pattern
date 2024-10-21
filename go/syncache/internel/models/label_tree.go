@@ -60,8 +60,14 @@ func (lt *LabelTreeMapper) GetById(labelTreeId int) LabelTree {
 	return labelTree
 }
 
-// UpdateLabelName 更新label体系的名称
-func (lt *LabelTreeMapper) UpdateLabelName(labelTreeName string, labelTreeId int) error {
-	result := lt.client.Model(&LabelTree{}).Where("id != ?", labelTreeId).Updates(LabelTree{Name: labelTreeName})
+// UpdateLabelNameById 更新label体系的名称
+func (lt *LabelTreeMapper) UpdateLabelNameById(labelTree LabelTree) error {
+	result := lt.client.Model(&LabelTree{}).Where("id = ?", labelTree.Id).Updates(LabelTree{Name: labelTree.Name})
+	return result.Error
+}
+
+// UpdateLabelParentId 更新label的父级id
+func (lt *LabelTreeMapper) UpdateLabelParentId(labelTree LabelTree) error {
+	result := lt.client.Model(&LabelTree{}).Where("id = ?", labelTree.Id).Updates(LabelTree{ParentId: labelTree.ParentId})
 	return result.Error
 }

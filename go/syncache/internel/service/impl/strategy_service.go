@@ -73,7 +73,7 @@ func (s *StrategyService) PushSpecificLabelTreeInfoById(labelTreeId int) (string
 }
 
 // PushAllLabelTreeAllParent 全量插入
-func (s *StrategyService) PushAllLabelTreeAllParent() map[int]string {
+func (s *StrategyService) PushAllLabelTreeAllParent() (map[int]string, error) {
 	redisNodeIdToParentsAll := "%s:all"
 	mapIdToParentsAll, _ := s.labelTreeService.MergeLabelTreeAll()
 
@@ -81,23 +81,102 @@ func (s *StrategyService) PushAllLabelTreeAllParent() map[int]string {
 	jsonMapIdToParents, err := json.Marshal(mapIdToParentsAll)
 	if err != nil {
 		log.Println(err)
+		return nil, err
 	}
 
 	// 全量插入
-	if errRedis := s.redisClient.SetEx(context.Background(), fmt.Sprintf(redisNodeIdToParentsAll, template.RedisKeyLabelTree), string(jsonMapIdToParents), time.Minute*5).Err(); errRedis != nil {
+	if err := s.redisClient.SetEx(context.Background(), fmt.Sprintf(redisNodeIdToParentsAll, template.RedisKeyLabelTree), string(jsonMapIdToParents), time.Minute*5).Err(); err != nil {
 		// 如果err 不为空 那么就要重试
-		log.Println("failed!!")
+		log.Println(err)
+		return nil, err
 	}
 
 	log.Println("redis 全量 key 上传成功🏅")
-	return mapIdToParentsAll
+	return mapIdToParentsAll, nil
 }
 
-// pushCacheToRedis 将缓存推入redis
-func (s *StrategyService) pushCacheToRedis() {
+/*
+UpdateSpecificLabelTreeById  根据label 的id更新label的信息 调用 label_tree service
 
+	更新数据库 然后将redis的key删除掉
+	因为加锁了 ，两个删除key的操作是互补影响的所以直接并行执行 并执行重试操作
+*/
+func (s *StrategyService) UpdateSpecificLabelTreeById(labelTree models.LabelTree, attributes service.LabelAttributes) error {
+	ch := make(chan error, 2)
+	wg := new(sync.WaitGroup)
+	defer func() {
+		close(ch)
+	}()
+
+	mapIdToParentsNeedUpdateOld, _ := s.labelTreeService.MergeLabelTreeOne(labelTree.Id)
+	if err := s.labelTreeService.UpdateSpecificLabelTreeById(labelTree, attributes); err != nil {
+		return err
+	}
+
+	// 如果是更新名字的话 直接删除就好了
+	if attributes == service.LabelName {
+		labelTreeRedisKey := fmt.Sprintf("%s:%d", template.RedisKeyLabelTree, labelTree.Id)
+		if _, err := s.redisClient.Del(context.Background(), labelTreeRedisKey).Result(); err != nil {
+			return s.deleteMultiKeyReTry(labelTreeRedisKey)
+		}
+		return nil
+	}
+
+	// 否则是体系更新
+	wg.Add(2)
+	go func() {
+		defer wg.Done()
+
+		// 删除新的子集的缓存
+		newLabelTreeKey := make([]string, 0)
+		mapIdToParentsNeedUpdateNew, _ := s.labelTreeService.MergeLabelTreeOne(labelTree.Id)
+
+		for nodeId, _ := range mapIdToParentsNeedUpdateNew {
+			newLabelTreeKey = append(newLabelTreeKey, fmt.Sprintf("%s:%d", template.RedisKeyLabelTree, nodeId))
+		}
+
+		if _, err := s.redisClient.Del(context.Background(), newLabelTreeKey...).Result(); err != nil {
+			ch <- s.deleteMultiKeyReTry(newLabelTreeKey...)
+			return
+		}
+		ch <- nil
+	}()
+
+	go func() {
+		defer wg.Done()
+
+		// 删除旧缓存
+		oldLabelTreeKey := make([]string, 0)
+		for nodeId, _ := range mapIdToParentsNeedUpdateOld {
+			oldLabelTreeKey = append(oldLabelTreeKey, fmt.Sprintf("%s:%d", template.RedisKeyLabelTree, nodeId))
+		}
+
+		if _, err := s.redisClient.Del(context.Background(), oldLabelTreeKey...).Result(); err != nil {
+			ch <- s.deleteMultiKeyReTry(oldLabelTreeKey...)
+			return
+		}
+		ch <- nil
+	}()
+
+	wg.Wait()
+
+	for i := 0; i < 2; i++ {
+		if err := <-ch; err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
 
-func (s *StrategyService) UpdateSpecificLabelTreeParentById(labelTreeId int) {
-
+// deleteKeyReTry 删除key失败 重新尝试删key
+func (s *StrategyService) deleteMultiKeyReTry(keyNeedReDelete ...string) error {
+	var err error
+	for i := 0; i < 5; i++ {
+		if _, err = s.redisClient.Del(context.Background(), keyNeedReDelete...).Result(); err == nil {
+			return nil
+		}
+		time.Sleep(time.Millisecond * 200)
+	}
+	return err
 }
