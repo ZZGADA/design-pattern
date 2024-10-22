@@ -169,7 +169,7 @@ func (s *StrategyService) UpdateSpecificLabelTreeById(labelTree models.LabelTree
 	return nil
 }
 
-// deleteKeyReTry 删除key失败 重新尝试删key
+// deleteMultiKeyReTry 删除key失败 重新尝试删key
 func (s *StrategyService) deleteMultiKeyReTry(keyNeedReDelete ...string) error {
 	var err error
 	for i := 0; i < 5; i++ {
