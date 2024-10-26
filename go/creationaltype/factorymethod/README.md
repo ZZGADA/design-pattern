@@ -32,12 +32,12 @@ Concrete Product：具体产品角色
 * 对于go来说，工厂方法的使用场景和java的使用场景和注意事项几乎是等价的，也是涉及了gc的过程（只不过go不是老年代对象，而是黑色对象，但是同样无法回收♻️），所以我就直接将java的版本粘贴过来了。
 * 因为涉及到类、成员变量、单例，这些还是从java的角度好理解。
 
-1. 这个时候可能就会问了，我们只是为了一个实例，有必要先实例这么多工厂吗？  --- 诶别说，还真有点点必要。😁因为工厂的存在帮助我们推延了实例的实例化过程
+1. 这个时候可能就会问了，我们只是为了一个实例，有必要先实例这么多工厂吗？  --- 诶别说，还真有点点必要。😁因为工厂的存在帮助我们推延了实例的实例化过程，同时不需要enum或者常量来标识我们多个具体的product，不同的工厂就对应了我们不用的product
 ```java
 
 class Test{
-Product product;
-ProductFactory factory;
+    Product product;
+    ProductFactory factory;
 
     Test(){
         this.product = new ProductA();
