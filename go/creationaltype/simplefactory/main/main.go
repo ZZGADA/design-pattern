@@ -12,11 +12,11 @@ func main() {
 	// 标识可以是 自定义类型（java中就是enum） 也可以是一个字符串 、int、bool
 	// 标识不管是什么都可以，只要保证标识和实体类型可以一一对应
 
-	IntityA := simpleFactory.GetIntity(simplefactory.IntityA)
-	IntityB := simpleFactory.GetIntity(simplefactory.IntityB)
-	IntityC := simpleFactory.GetIntity(simplefactory.IntityC)
+	InstanceA := simpleFactory.GetInstance(simplefactory.EntityA)
+	InstanceB := simpleFactory.GetInstance(simplefactory.EntityB)
+	InstanceC := simpleFactory.GetInstance(simplefactory.EntityC)
 
-	IntityA.Say()
-	IntityB.Say()
-	IntityC.Say()
+	InstanceA.Say()
+	InstanceB.Say()
+	InstanceC.Say()
 }

@@ -2,18 +2,18 @@ package simplefactory
 
 import "fmt"
 
-type IntityType string
+type EntityType string
 
 const (
-	IntityA IntityType = "IntityA"
-	IntityB IntityType = "IntityB"
-	IntityC IntityType = "IntityC"
+	EntityA EntityType = "EntityA"
+	EntityB EntityType = "EntityB"
+	EntityC EntityType = "EntityC"
 )
 
 type SimpleFactory struct {
 }
 
-type BaseStructre struct {
+type BaseStructure struct {
 	Name string
 }
 
@@ -24,7 +24,7 @@ type BaseInterface interface {
 ////////////////////////////////////////////////////////
 
 type StructureA struct {
-	BaseStructre
+	BaseStructure
 }
 
 func (a *StructureA) Say() {
@@ -34,7 +34,7 @@ func (a *StructureA) Say() {
 ////////////////////////////////////////////////////////
 
 type StructureB struct {
-	BaseStructre
+	BaseStructure
 }
 
 func (b *StructureB) Say() {
@@ -44,7 +44,7 @@ func (b *StructureB) Say() {
 ////////////////////////////////////////////////////////
 
 type StructureC struct {
-	BaseStructre
+	BaseStructure
 }
 
 func (c *StructureC) Say() {
@@ -53,24 +53,24 @@ func (c *StructureC) Say() {
 
 ////////////////////////////////////////////////////////
 
-func (simpleFactory *SimpleFactory) GetIntity(typeIn IntityType) BaseInterface {
+func (simpleFactory *SimpleFactory) GetInstance(typeIn EntityType) BaseInterface {
 	switch typeIn {
-	case IntityA:
+	case EntityA:
 		return &StructureA{
-			BaseStructre: BaseStructre{
-				Name: "it is Structre A",
+			BaseStructure: BaseStructure{
+				Name: "it is structure A",
 			},
 		}
-	case IntityB:
+	case EntityB:
 		return &StructureB{
-			BaseStructre: BaseStructre{
-				Name: "it is Structre B",
+			BaseStructure: BaseStructure{
+				Name: "it is structure B",
 			},
 		}
-	case IntityC:
+	case EntityC:
 		return &StructureB{
-			BaseStructre: BaseStructre{
-				Name: "it is Structre C",
+			BaseStructure: BaseStructure{
+				Name: "it is structure C",
 			},
 		}
 	default:

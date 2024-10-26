@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/structureType/bridge/bridge.iml" filepath="$PROJECT_DIR$/structureType/bridge/bridge.iml" />
       <module fileurl="file://$PROJECT_DIR$/behaviourType/client/client.iml" filepath="$PROJECT_DIR$/behaviourType/client/client.iml" />
       <module fileurl="file://$PROJECT_DIR$/structureType/decorator/decorator.iml" filepath="$PROJECT_DIR$/structureType/decorator/decorator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/creationalType/factoryMethod/factoryMethod.iml" filepath="$PROJECT_DIR$/creationalType/factoryMethod/factoryMethod.iml" />
       <module fileurl="file://$PROJECT_DIR$/structureType/flyWeight/flyWeight.iml" filepath="$PROJECT_DIR$/structureType/flyWeight/flyWeight.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java.iml" filepath="$PROJECT_DIR$/.idea/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/behaviourType/mediator/mediator.iml" filepath="$PROJECT_DIR$/behaviourType/mediator/mediator.iml" />
