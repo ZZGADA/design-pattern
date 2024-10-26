@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/behaviourType/mediator/mediator.iml" filepath="$PROJECT_DIR$/behaviourType/mediator/mediator.iml" />
       <module fileurl="file://$PROJECT_DIR$/behaviourType/observer/observer.iml" filepath="$PROJECT_DIR$/behaviourType/observer/observer.iml" />
       <module fileurl="file://$PROJECT_DIR$/structureType/proxy/proxy.iml" filepath="$PROJECT_DIR$/structureType/proxy/proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/creationalType/simpleFactory/simpleFactory.iml" filepath="$PROJECT_DIR$/creationalType/simpleFactory/simpleFactory.iml" />
       <module fileurl="file://$PROJECT_DIR$/creationalType/singleton/singleton.iml" filepath="$PROJECT_DIR$/creationalType/singleton/singleton.iml" />
       <module fileurl="file://$PROJECT_DIR$/behaviourType/state/state.iml" filepath="$PROJECT_DIR$/behaviourType/state/state.iml" />
       <module fileurl="file://$PROJECT_DIR$/behaviourType/strategy/strategy.iml" filepath="$PROJECT_DIR$/behaviourType/strategy/strategy.iml" />
