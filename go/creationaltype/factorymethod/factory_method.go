@@ -1,13 +1,5 @@
 package factorymethod
 
-type EntityType string
-
-const (
-	EntityA EntityType = "EntityA"
-	EntityB EntityType = "EntityB"
-	EntityC EntityType = "EntityC"
-)
-
 // ProductFactory 一个产品一个实现类
 type ProductFactory interface {
 	CreateProduct() Product
