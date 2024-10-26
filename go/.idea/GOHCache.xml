@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GoORMHelperCache">
+    <option name="schemaMapping">
+      <map>
+        <entry key="AmdCPU">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/bridge/AmdCPU.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ApplianceFactory">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/abstractfactory/factory.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="BaseStrategy">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_base.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="BaseStructre">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/simplefactory/simple_factory.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="BaseStructure">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/simplefactory/simple_factory.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="CashPayStrategy">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/strategy/strategy.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Chair">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/abstractfactory/product.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="CoffeeConcreteComponent">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/decorator/concreteComponent.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="CoffeeDecorator">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/decorator/decorator.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="CoffeeDecoratorAddMilk">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/decorator/concreteDecorator.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="CoffeeDecoratorChocolate">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/decorator/concreteDecorator.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Colleague">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/mediator/colleague.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ConcreteFlyWeightFirst">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/flyWeight/ConcreteFlyWeight.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ConcreteFlyWeightSecond">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/flyWeight/ConcreteFlyWeight.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ConcreteFlyWeightSimpleFactory">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/flyWeight/ConcreteFlyWeightSimpleFactory.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ConcreteMediator">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/mediator/mediator.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ConcreteObserver">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/observer/observe.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ConcreteSubject">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/observer/subject.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Config">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/conf/config.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Context">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/state/context.go" />
+              <option value="file://$PROJECT_DIR$/behaviour/strategy/context.go" />
+              <option value="file://$PROJECT_DIR$/syncache/internel/strategy/context.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="CreditPayStrategy">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/strategy/strategy.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="DelayDoubleDeleteStrategy">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_delay_double_delete.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="FactoryProducer">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/abstractfactory/factory.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="FlyWeightFactory">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/flyWeight/FlyWeightFactory.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Fridge">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/abstractfactory/product.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="FurnitureFactory">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/abstractfactory/factory.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="IOAbstractionBase">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/bridge/IOAbstraction.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="IntelCPU">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/bridge/IntelCPU.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="LabelTree">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/internel/models/label_tree.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="LabelTreeMapper">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/internel/models/label_tree.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="LabelTreeService">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/internel/service/impl/label_tree.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="LightOffCommandConcrete">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/command/command.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="LightOnCommandConcrete">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/command/command.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="LightReceiver">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/command/receiver.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="MqAsyUpdateStrategy">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_mq_asy.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Mysql">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/internel/client/mysql.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="MysqlConfig">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/conf/config.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Oven">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/abstractfactory/product.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="PauseState">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/state/state.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="PlayState">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/state/state.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ProductA">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/factorymethod/product.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ProductB">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/factorymethod/product.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ProductC">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/factorymethod/product.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ProductFactoryA">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/factorymethod/factory_method.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ProductFactoryB">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/factorymethod/factory_method.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ProductFactoryC">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/factorymethod/factory_method.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Proxy">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/proxy/proxy.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RandomIORefined">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/bridge/RandomIORefined.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ReadWriteLockStrategy">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_rwlock.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RealSubject">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/proxy/subject.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Redis">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/internel/client/redis.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RedisConfig">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/conf/config.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RedisLabelTreeDataTemp">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/internel/template/redis.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RemoteInvoker">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/command/invoker.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="SequentialIORefined">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/bridge/SequentialIORefined.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="SimpleFactory">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/simplefactory/simple_factory.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Singleton">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/singleton/singleton.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="StateBase">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/state/state.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="StopState">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviour/state/state.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="StrategyService">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/internel/service/impl/strategy_service.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="StructureA">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/simplefactory/simple_factory.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="StructureB">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/simplefactory/simple_factory.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="StructureC">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/simplefactory/simple_factory.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Table">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/abstractfactory/product.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="dft">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/conf/config.go" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="scannedPathMapping">
+      <map>
+        <entry key="file://$PROJECT_DIR$/behaviour/command/command.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728453910256" />
+              <option name="schema">
+                <list>
+                  <option value="LightOnCommandConcrete" />
+                  <option value="LightOffCommandConcrete" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/command/invoker.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728453910260" />
+              <option name="schema">
+                <list>
+                  <option value="RemoteInvoker" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/command/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728518669553" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/command/receiver.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728453196357" />
+              <option name="schema">
+                <list>
+                  <option value="LightReceiver" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/mediator/colleague.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728890940594" />
+              <option name="schema">
+                <list>
+                  <option value="Colleague" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/mediator/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728891147916" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/mediator/mediator.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728891125564" />
+              <option name="schema">
+                <list>
+                  <option value="ConcreteMediator" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/observer/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728874468645" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/observer/observe.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728874453946" />
+              <option name="schema">
+                <list>
+                  <option value="ConcreteObserver" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/observer/subject.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728874323096" />
+              <option name="schema">
+                <list>
+                  <option value="ConcreteSubject" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/state/context.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728900747452" />
+              <option name="schema">
+                <list>
+                  <option value="Context" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/state/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728900747460" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/state/state.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728900640059" />
+              <option name="schema">
+                <list>
+                  <option value="StateBase" />
+                  <option value="PlayState" />
+                  <option value="PauseState" />
+                  <option value="StopState" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/strategy/context.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729038642848" />
+              <option name="schema">
+                <list>
+                  <option value="Context" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/strategy/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729038642904" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviour/strategy/strategy.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729038345239" />
+              <option name="schema">
+                <list>
+                  <option value="CashPayStrategy" />
+                  <option value="CreditPayStrategy" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/abstractfactory/factory.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729927528487" />
+              <option name="schema">
+                <list>
+                  <option value="FurnitureFactory" />
+                  <option value="ApplianceFactory" />
+                  <option value="FactoryProducer" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/abstractfactory/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729927650227" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/abstractfactory/product.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729927223107" />
+              <option name="schema">
+                <list>
+                  <option value="Chair" />
+                  <option value="Table" />
+                  <option value="Fridge" />
+                  <option value="Oven" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/factorymethod/factory_method.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729919777453" />
+              <option name="schema">
+                <list>
+                  <option value="ProductFactoryA" />
+                  <option value="ProductFactoryB" />
+                  <option value="ProductFactoryC" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/factorymethod/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729917097571" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/factorymethod/product.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729917097492" />
+              <option name="schema">
+                <list>
+                  <option value="ProductA" />
+                  <option value="ProductB" />
+                  <option value="ProductC" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/simplefactory/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729917097437" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/simplefactory/simple_factory.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729917097431" />
+              <option name="schema">
+                <list>
+                  <option value="SimpleFactory" />
+                  <option value="BaseStructure" />
+                  <option value="StructureA" />
+                  <option value="StructureB" />
+                  <option value="StructureC" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/singleton/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729609717812" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/singleton/singleton.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729610285266" />
+              <option name="schema">
+                <list>
+                  <option value="Singleton" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/plus_go_ingredien.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728366506512" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/scriptToGenerateFunc.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728305321220" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/bridge/AmdCPU.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728301076714" />
+              <option name="schema">
+                <list>
+                  <option value="AmdCPU" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/bridge/IOAbstraction.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728304516013" />
+              <option name="schema">
+                <list>
+                  <option value="IOAbstractionBase" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/bridge/ImplementorCPU.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728301076792" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/bridge/IntelCPU.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728301076723" />
+              <option name="schema">
+                <list>
+                  <option value="IntelCPU" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/bridge/RandomIORefined.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728304774777" />
+              <option name="schema">
+                <list>
+                  <option value="RandomIORefined" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/bridge/SequentialIORefined.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728304774787" />
+              <option name="schema">
+                <list>
+                  <option value="SequentialIORefined" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/bridge/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728356596317" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/decorator/component.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728115724182" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/decorator/concreteComponent.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728115724202" />
+              <option name="schema">
+                <list>
+                  <option value="CoffeeConcreteComponent" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/decorator/concreteDecorator.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728118299696" />
+              <option name="schema">
+                <list>
+                  <option value="CoffeeDecoratorAddMilk" />
+                  <option value="CoffeeDecoratorChocolate" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/decorator/decorator.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728116704047" />
+              <option name="schema">
+                <list>
+                  <option value="CoffeeDecorator" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/decorator/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728119377325" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/flyWeight/ConcreteFlyWeight.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728357900838" />
+              <option name="schema">
+                <list>
+                  <option value="ConcreteFlyWeightFirst" />
+                  <option value="ConcreteFlyWeightSecond" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/flyWeight/ConcreteFlyWeightSimpleFactory.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728357900644" />
+              <option name="schema">
+                <list>
+                  <option value="ConcreteFlyWeightSimpleFactory" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/flyWeight/FlyWeightFactory.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728358396078" />
+              <option name="schema">
+                <list>
+                  <option value="FlyWeightFactory" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/flyWeight/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1728358396053" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/proxy/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729091961593" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/proxy/proxy.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729091961591" />
+              <option name="schema">
+                <list>
+                  <option value="Proxy" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/proxy/subject.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729091638917" />
+              <option name="schema">
+                <list>
+                  <option value="RealSubject" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/conf/config.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729326963930" />
+              <option name="schema">
+                <list>
+                  <option value="MysqlConfig" />
+                  <option value="RedisConfig" />
+                  <option value="Config" />
+                  <option value="dft" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/client/mysql.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729325373264" />
+              <option name="schema">
+                <list>
+                  <option value="Mysql" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/client/redis.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729329857427" />
+              <option name="schema">
+                <list>
+                  <option value="Redis" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/models/label_tree.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729481140087" />
+              <option name="schema">
+                <list>
+                  <option value="LabelTreeMapper" />
+                  <option value="LabelTree" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/service/enum.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729493383533" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/service/impl/label_tree.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729493383500" />
+              <option name="schema">
+                <list>
+                  <option value="LabelTreeService" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/service/impl/strategy_service.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729608833602" />
+              <option name="schema">
+                <list>
+                  <option value="StrategyService" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/service/service.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729493383591" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/strategy/context.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729330713475" />
+              <option name="schema">
+                <list>
+                  <option value="Context" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/strategy/strategy.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729400440121" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_base.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729397670142" />
+              <option name="schema">
+                <list>
+                  <option value="BaseStrategy" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_delay_double_delete.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729325244636" />
+              <option name="schema">
+                <list>
+                  <option value="DelayDoubleDeleteStrategy" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_mq_asy.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729325244630" />
+              <option name="schema">
+                <list>
+                  <option value="MqAsyUpdateStrategy" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_rwlock.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729498344476" />
+              <option name="schema">
+                <list>
+                  <option value="ReadWriteLockStrategy" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/template/redis.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729497999532" />
+              <option name="schema">
+                <list>
+                  <option value="RedisLabelTreeDataTemp" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/utils/go_routine.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729381792794" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1729387428154" />
+            </ScannedPath>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="tableStructMapping">
+      <map>
+        <entry key="amd_cpu" value="AmdCPU" />
+        <entry key="appliance_factory" value="ApplianceFactory" />
+        <entry key="base_strategy" value="BaseStrategy" />
+        <entry key="base_structre" value="BaseStructre" />
+        <entry key="base_structure" value="BaseStructure" />
+        <entry key="cash_pay_strategy" value="CashPayStrategy" />
+        <entry key="chair" value="Chair" />
+        <entry key="coffee_concrete_component" value="CoffeeConcreteComponent" />
+        <entry key="coffee_decorator" value="CoffeeDecorator" />
+        <entry key="coffee_decorator_add_milk" value="CoffeeDecoratorAddMilk" />
+        <entry key="coffee_decorator_chocolate" value="CoffeeDecoratorChocolate" />
+        <entry key="colleague" value="Colleague" />
+        <entry key="concrete_fly_weight_first" value="ConcreteFlyWeightFirst" />
+        <entry key="concrete_fly_weight_second" value="ConcreteFlyWeightSecond" />
+        <entry key="concrete_fly_weight_simple_factory" value="ConcreteFlyWeightSimpleFactory" />
+        <entry key="concrete_mediator" value="ConcreteMediator" />
+        <entry key="concrete_observer" value="ConcreteObserver" />
+        <entry key="concrete_subject" value="ConcreteSubject" />
+        <entry key="config" value="Config" />
+        <entry key="context" value="Context" />
+        <entry key="credit_pay_strategy" value="CreditPayStrategy" />
+        <entry key="delay_double_delete_strategy" value="DelayDoubleDeleteStrategy" />
+        <entry key="dft" value="dft" />
+        <entry key="factory_producer" value="FactoryProducer" />
+        <entry key="fly_weight_factory" value="FlyWeightFactory" />
+        <entry key="fridge" value="Fridge" />
+        <entry key="furniture_factory" value="FurnitureFactory" />
+        <entry key="intel_cpu" value="IntelCPU" />
+        <entry key="io_abstraction_base" value="IOAbstractionBase" />
+        <entry key="label_tree" value="LabelTree" />
+        <entry key="label_tree_mapper" value="LabelTreeMapper" />
+        <entry key="label_tree_service" value="LabelTreeService" />
+        <entry key="light_off_command_concrete" value="LightOffCommandConcrete" />
+        <entry key="light_on_command_concrete" value="LightOnCommandConcrete" />
+        <entry key="light_receiver" value="LightReceiver" />
+        <entry key="mq_asy_update_strategy" value="MqAsyUpdateStrategy" />
+        <entry key="mysql" value="Mysql" />
+        <entry key="mysql_config" value="MysqlConfig" />
+        <entry key="oven" value="Oven" />
+        <entry key="pause_state" value="PauseState" />
+        <entry key="play_state" value="PlayState" />
+        <entry key="product_a" value="ProductA" />
+        <entry key="product_b" value="ProductB" />
+        <entry key="product_c" value="ProductC" />
+        <entry key="product_factory_a" value="ProductFactoryA" />
+        <entry key="product_factory_b" value="ProductFactoryB" />
+        <entry key="product_factory_c" value="ProductFactoryC" />
+        <entry key="proxy" value="Proxy" />
+        <entry key="random_io_refined" value="RandomIORefined" />
+        <entry key="read_write_lock_strategy" value="ReadWriteLockStrategy" />
+        <entry key="real_subject" value="RealSubject" />
+        <entry key="redis" value="Redis" />
+        <entry key="redis_config" value="RedisConfig" />
+        <entry key="redis_label_tree_data_temp" value="RedisLabelTreeDataTemp" />
+        <entry key="remote_invoker" value="RemoteInvoker" />
+        <entry key="sequential_io_refined" value="SequentialIORefined" />
+        <entry key="simple_factory" value="SimpleFactory" />
+        <entry key="singleton" value="Singleton" />
+        <entry key="state_base" value="StateBase" />
+        <entry key="stop_state" value="StopState" />
+        <entry key="strategy_service" value="StrategyService" />
+        <entry key="structure_a" value="StructureA" />
+        <entry key="structure_b" value="StructureB" />
+        <entry key="structure_c" value="StructureC" />
+        <entry key="table" value="Table" />
+      </map>
+    </option>
+    <option name="lastTimeChecked" value="1729915281162" />
+  </component>
+</project>
