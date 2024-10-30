@@ -24,13 +24,6 @@
             </set>
           </value>
         </entry>
-        <entry key="BaseStructre">
-          <value>
-            <set>
-              <option value="file://$PROJECT_DIR$/creationaltype/simplefactory/simple_factory.go" />
-            </set>
-          </value>
-        </entry>
         <entry key="BaseStructure">
           <value>
             <set>
@@ -749,13 +742,6 @@
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/plus_go_ingredien.go">
-          <value>
-            <ScannedPath>
-              <option name="lastModified" value="1728366506512" />
-            </ScannedPath>
-          </value>
-        </entry>
         <entry key="file://$PROJECT_DIR$/scriptToGenerateFunc.go">
           <value>
             <ScannedPath>
@@ -1153,7 +1139,6 @@
         <entry key="amd_cpu" value="AmdCPU" />
         <entry key="appliance_factory" value="ApplianceFactory" />
         <entry key="base_strategy" value="BaseStrategy" />
-        <entry key="base_structre" value="BaseStructre" />
         <entry key="base_structure" value="BaseStructure" />
         <entry key="cash_pay_strategy" value="CashPayStrategy" />
         <entry key="chair" value="Chair" />
@@ -1217,6 +1202,6 @@
         <entry key="table" value="Table" />
       </map>
     </option>
-    <option name="lastTimeChecked" value="1729915281162" />
+    <option name="lastTimeChecked" value="1730251165539" />
   </component>
 </project>

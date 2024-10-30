@@ -25,4 +25,4 @@ hub上，让你免去搭建环境的痛苦😖。
 --- 
 ## 慢SQL 真实的线上分析、排查、解决思路
 &nbsp;&nbsp; 进一周都在分析慢SQL和慢接口，学习到了很多知识，让我跟你们分享一下吧。   
-&nbsp;&nbsp; 快点进来吧！！！➡️👍[缓存于DB一致性问题](./go/slowapiandsql/READE.md)
+&nbsp;&nbsp; 快点进来吧！！！➡️👍[慢SQL排查和优化，带你走进索引](./go/slowapiandsql/READE.md)
