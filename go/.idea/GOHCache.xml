@@ -173,6 +173,13 @@
             </set>
           </value>
         </entry>
+        <entry key="Facade">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/facade/facade.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="FactoryProducer">
           <value>
             <set>
@@ -254,6 +261,20 @@
           <value>
             <set>
               <option value="file://$PROJECT_DIR$/behaviour/command/receiver.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ModuleA">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/facade/facade.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ModuleB">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/facade/facade.go" />
             </set>
           </value>
         </entry>
@@ -926,6 +947,27 @@
             </ScannedPath>
           </value>
         </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/facade/facade.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1730779243024" />
+              <option name="schema">
+                <list>
+                  <option value="ModuleA" />
+                  <option value="ModuleB" />
+                  <option value="Facade" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/facade/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1730779243017" />
+            </ScannedPath>
+          </value>
+        </entry>
         <entry key="file://$PROJECT_DIR$/structuretype/flyWeight/ConcreteFlyWeight.go">
           <value>
             <ScannedPath>
@@ -1213,6 +1255,7 @@
         <entry key="credit_pay_strategy" value="CreditPayStrategy" />
         <entry key="delay_double_delete_strategy" value="DelayDoubleDeleteStrategy" />
         <entry key="dft" value="dft" />
+        <entry key="facade" value="Facade" />
         <entry key="factory_producer" value="FactoryProducer" />
         <entry key="fly_weight_factory" value="FlyWeightFactory" />
         <entry key="fridge" value="Fridge" />
@@ -1225,6 +1268,8 @@
         <entry key="light_off_command_concrete" value="LightOffCommandConcrete" />
         <entry key="light_on_command_concrete" value="LightOnCommandConcrete" />
         <entry key="light_receiver" value="LightReceiver" />
+        <entry key="module_a" value="ModuleA" />
+        <entry key="module_b" value="ModuleB" />
         <entry key="mq_asy_update_strategy" value="MqAsyUpdateStrategy" />
         <entry key="mysql" value="Mysql" />
         <entry key="mysql_config" value="MysqlConfig" />

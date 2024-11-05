@@ -10,19 +10,20 @@
 我们一般通过一个大的map来维护这些单例，通过统一的一个Get方法对外暴露来获取这些单例。
 
 ```go
+package main
 
 func (flyWeightFactory *FlyWeightFactory) Get(key string) ConcreteFlyWeight {
-concreteFwFactory := GetConcreteFlyWeightSimpleFactory()
-_, exists := flyWeightFactory.mapFlyWeight[key]
-if !exists {
-lock.Lock()
-// 按照单例的设计模式，单例都通过双重验证的形式实现单例的创建和获取
-if _, existsDouble := flyWeightFactory.mapFlyWeight[key]; !existsDouble {
-flyWeightFactory.mapFlyWeight[key] = concreteFwFactory.Get(key)
-}
-lock.Unlock()
-}
-return flyWeightFactory.mapFlyWeight[key]
+   concreteFwFactory := GetConcreteFlyWeightSimpleFactory()
+   _, exists := flyWeightFactory.mapFlyWeight[key]
+   if !exists {
+   lock.Lock()
+   // 按照单例的设计模式，单例都通过双重验证的形式实现单例的创建和获取
+   if _, existsDouble := flyWeightFactory.mapFlyWeight[key]; !existsDouble {
+   flyWeightFactory.mapFlyWeight[key] = concreteFwFactory.Get(key)
+   }
+   lock.Unlock()
+   }
+   return flyWeightFactory.mapFlyWeight[key]
 }
 
 ```
