@@ -3,6 +3,27 @@
   <component name="GoORMHelperCache">
     <option name="schemaMapping">
       <map>
+        <entry key="AdapteeImpl">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/adapter/adaptee.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="AdapterImpl">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/adapter/adapter.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="AdapterImple">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/structuretype/adapter/adapter.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="AmdCPU">
           <value>
             <set>
@@ -749,6 +770,37 @@
             </ScannedPath>
           </value>
         </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/adapter/adaptee.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1730770790679" />
+              <option name="schema">
+                <list>
+                  <option value="AdapteeImpl" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/adapter/adapter.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1730770772553" />
+              <option name="schema">
+                <list>
+                  <option value="AdapterImpl" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/structuretype/adapter/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1730770741405" />
+            </ScannedPath>
+          </value>
+        </entry>
         <entry key="file://$PROJECT_DIR$/structuretype/bridge/AmdCPU.go">
           <value>
             <ScannedPath>
@@ -1136,6 +1188,9 @@
     </option>
     <option name="tableStructMapping">
       <map>
+        <entry key="adaptee_impl" value="AdapteeImpl" />
+        <entry key="adapter_impl" value="AdapterImpl" />
+        <entry key="adapter_imple" value="AdapterImple" />
         <entry key="amd_cpu" value="AmdCPU" />
         <entry key="appliance_factory" value="ApplianceFactory" />
         <entry key="base_strategy" value="BaseStrategy" />
@@ -1202,6 +1257,6 @@
         <entry key="table" value="Table" />
       </map>
     </option>
-    <option name="lastTimeChecked" value="1730251165539" />
+    <option name="lastTimeChecked" value="1730769127805" />
   </component>
 </project>
