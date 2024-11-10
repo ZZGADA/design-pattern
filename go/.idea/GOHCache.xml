@@ -17,13 +17,6 @@
             </set>
           </value>
         </entry>
-        <entry key="AdapterImple">
-          <value>
-            <set>
-              <option value="file://$PROJECT_DIR$/structuretype/adapter/adapter.go" />
-            </set>
-          </value>
-        </entry>
         <entry key="AmdCPU">
           <value>
             <set>
@@ -55,7 +48,7 @@
         <entry key="CashPayStrategy">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/strategy/strategy.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/strategy/strategy.go" />
             </set>
           </value>
         </entry>
@@ -97,7 +90,21 @@
         <entry key="Colleague">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/mediator/colleague.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/mediator/colleague.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ConcreteBuilderA">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/builder/builder.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ConcreteBuilderB">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/builder/builder.go" />
             </set>
           </value>
         </entry>
@@ -122,24 +129,38 @@
             </set>
           </value>
         </entry>
+        <entry key="ConcreteHandlerA">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviourtype/chain/handler.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ConcreteHandlerB">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviourtype/chain/handler.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="ConcreteMediator">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/mediator/mediator.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/mediator/mediator.go" />
             </set>
           </value>
         </entry>
         <entry key="ConcreteObserver">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/observer/observe.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/observer/observe.go" />
             </set>
           </value>
         </entry>
         <entry key="ConcreteSubject">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/observer/subject.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/observer/subject.go" />
             </set>
           </value>
         </entry>
@@ -153,8 +174,8 @@
         <entry key="Context">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/state/context.go" />
-              <option value="file://$PROJECT_DIR$/behaviour/strategy/context.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/state/context.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/strategy/context.go" />
               <option value="file://$PROJECT_DIR$/syncache/internel/strategy/context.go" />
             </set>
           </value>
@@ -162,7 +183,7 @@
         <entry key="CreditPayStrategy">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/strategy/strategy.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/strategy/strategy.go" />
             </set>
           </value>
         </entry>
@@ -170,6 +191,13 @@
           <value>
             <set>
               <option value="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_delay_double_delete.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Director">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/builder/director.go" />
             </set>
           </value>
         </entry>
@@ -205,6 +233,13 @@
           <value>
             <set>
               <option value="file://$PROJECT_DIR$/creationaltype/abstractfactory/factory.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="HandlerContext">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviourtype/chain/handlerContext.go" />
             </set>
           </value>
         </entry>
@@ -246,21 +281,21 @@
         <entry key="LightOffCommandConcrete">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/command/command.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/command/command.go" />
             </set>
           </value>
         </entry>
         <entry key="LightOnCommandConcrete">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/command/command.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/command/command.go" />
             </set>
           </value>
         </entry>
         <entry key="LightReceiver">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/command/receiver.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/command/receiver.go" />
             </set>
           </value>
         </entry>
@@ -309,20 +344,21 @@
         <entry key="PauseState">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/state/state.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/state/state.go" />
             </set>
           </value>
         </entry>
         <entry key="PlayState">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/state/state.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/state/state.go" />
             </set>
           </value>
         </entry>
         <entry key="ProductA">
           <value>
             <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/builder/product.go" />
               <option value="file://$PROJECT_DIR$/creationaltype/factorymethod/product.go" />
             </set>
           </value>
@@ -330,6 +366,7 @@
         <entry key="ProductB">
           <value>
             <set>
+              <option value="file://$PROJECT_DIR$/creationaltype/builder/product.go" />
               <option value="file://$PROJECT_DIR$/creationaltype/factorymethod/product.go" />
             </set>
           </value>
@@ -414,7 +451,7 @@
         <entry key="RemoteInvoker">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/command/invoker.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/command/invoker.go" />
             </set>
           </value>
         </entry>
@@ -442,14 +479,14 @@
         <entry key="StateBase">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/state/state.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/state/state.go" />
             </set>
           </value>
         </entry>
         <entry key="StopState">
           <value>
             <set>
-              <option value="file://$PROJECT_DIR$/behaviour/state/state.go" />
+              <option value="file://$PROJECT_DIR$/behaviourtype/state/state.go" />
             </set>
           </value>
         </entry>
@@ -499,7 +536,39 @@
     </option>
     <option name="scannedPathMapping">
       <map>
-        <entry key="file://$PROJECT_DIR$/behaviour/command/command.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/chain/handler.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1731220228475" />
+              <option name="schema">
+                <list>
+                  <option value="ConcreteHandlerA" />
+                  <option value="ConcreteHandlerB" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviourtype/chain/handlerContext.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1731220019231" />
+              <option name="schema">
+                <list>
+                  <option value="HandlerContext" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviourtype/chain/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1731220060170" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviourtype/command/command.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728453910256" />
@@ -512,7 +581,7 @@
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/command/invoker.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/command/invoker.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728453910260" />
@@ -524,14 +593,14 @@
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/command/main/main.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/command/main/main.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728518669553" />
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/command/receiver.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/command/receiver.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728453196357" />
@@ -543,7 +612,7 @@
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/mediator/colleague.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/mediator/colleague.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728890940594" />
@@ -555,14 +624,14 @@
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/mediator/main/main.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/mediator/main/main.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728891147916" />
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/mediator/mediator.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/mediator/mediator.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728891125564" />
@@ -574,14 +643,14 @@
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/observer/main/main.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/observer/main/main.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728874468645" />
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/observer/observe.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/observer/observe.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728874453946" />
@@ -593,7 +662,7 @@
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/observer/subject.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/observer/subject.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728874323096" />
@@ -605,7 +674,7 @@
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/state/context.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/state/context.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728900747452" />
@@ -617,14 +686,14 @@
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/state/main/main.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/state/main/main.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728900747460" />
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/state/state.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/state/state.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1728900640059" />
@@ -639,7 +708,7 @@
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/strategy/context.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/strategy/context.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1729038642848" />
@@ -651,14 +720,14 @@
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/strategy/main/main.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/strategy/main/main.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1729038642904" />
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/behaviour/strategy/strategy.go">
+        <entry key="file://$PROJECT_DIR$/behaviourtype/strategy/strategy.go">
           <value>
             <ScannedPath>
               <option name="lastModified" value="1729038345239" />
@@ -702,6 +771,51 @@
                   <option value="Table" />
                   <option value="Fridge" />
                   <option value="Oven" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/builder/builder.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1730856345457" />
+              <option name="schema">
+                <list>
+                  <option value="ConcreteBuilderA" />
+                  <option value="ConcreteBuilderB" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/builder/director.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1730856650501" />
+              <option name="schema">
+                <list>
+                  <option value="Director" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/builder/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1730856697426" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/creationaltype/builder/product.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1730856376638" />
+              <option name="schema">
+                <list>
+                  <option value="ProductA" />
+                  <option value="ProductB" />
                 </list>
               </option>
             </ScannedPath>
@@ -1232,7 +1346,6 @@
       <map>
         <entry key="adaptee_impl" value="AdapteeImpl" />
         <entry key="adapter_impl" value="AdapterImpl" />
-        <entry key="adapter_imple" value="AdapterImple" />
         <entry key="amd_cpu" value="AmdCPU" />
         <entry key="appliance_factory" value="ApplianceFactory" />
         <entry key="base_strategy" value="BaseStrategy" />
@@ -1244,9 +1357,13 @@
         <entry key="coffee_decorator_add_milk" value="CoffeeDecoratorAddMilk" />
         <entry key="coffee_decorator_chocolate" value="CoffeeDecoratorChocolate" />
         <entry key="colleague" value="Colleague" />
+        <entry key="concrete_builder_a" value="ConcreteBuilderA" />
+        <entry key="concrete_builder_b" value="ConcreteBuilderB" />
         <entry key="concrete_fly_weight_first" value="ConcreteFlyWeightFirst" />
         <entry key="concrete_fly_weight_second" value="ConcreteFlyWeightSecond" />
         <entry key="concrete_fly_weight_simple_factory" value="ConcreteFlyWeightSimpleFactory" />
+        <entry key="concrete_handler_a" value="ConcreteHandlerA" />
+        <entry key="concrete_handler_b" value="ConcreteHandlerB" />
         <entry key="concrete_mediator" value="ConcreteMediator" />
         <entry key="concrete_observer" value="ConcreteObserver" />
         <entry key="concrete_subject" value="ConcreteSubject" />
@@ -1255,11 +1372,13 @@
         <entry key="credit_pay_strategy" value="CreditPayStrategy" />
         <entry key="delay_double_delete_strategy" value="DelayDoubleDeleteStrategy" />
         <entry key="dft" value="dft" />
+        <entry key="director" value="Director" />
         <entry key="facade" value="Facade" />
         <entry key="factory_producer" value="FactoryProducer" />
         <entry key="fly_weight_factory" value="FlyWeightFactory" />
         <entry key="fridge" value="Fridge" />
         <entry key="furniture_factory" value="FurnitureFactory" />
+        <entry key="handler_context" value="HandlerContext" />
         <entry key="intel_cpu" value="IntelCPU" />
         <entry key="io_abstraction_base" value="IOAbstractionBase" />
         <entry key="label_tree" value="LabelTree" />
@@ -1302,6 +1421,6 @@
         <entry key="table" value="Table" />
       </map>
     </option>
-    <option name="lastTimeChecked" value="1730769127805" />
+    <option name="lastTimeChecked" value="1731218662145" />
   </component>
 </project>
