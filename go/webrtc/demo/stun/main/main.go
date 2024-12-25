@@ -11,6 +11,7 @@ import (
 func main() {
 	// STUN服务器地址
 	stunServerAddr := "8.130.14.29:53478"
+	//stunServerAddr := "stun:stun.l.google.com:19302"
 
 	// 创建UDP连接
 	conn, err := net.Dial("udp", stunServerAddr)
@@ -28,8 +29,8 @@ func main() {
 
 	// 设置用户名和密码
 	username := "ZZGEDA"
-	password := "zZ-szshyjbz16D"
-	realm := "example.com"
+	password := "tal1024"
+	realm := "ZZGEDA.com"
 
 	// 生成HA1
 	ha1 := stun.NewLongTermIntegrity(username, realm, password)

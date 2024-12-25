@@ -1340,6 +1340,13 @@
             </ScannedPath>
           </value>
         </entry>
+        <entry key="file://$PROJECT_DIR$/webrtc/demo/stun/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1731396125667" />
+            </ScannedPath>
+          </value>
+        </entry>
       </map>
     </option>
     <option name="tableStructMapping">
@@ -1421,6 +1428,6 @@
         <entry key="table" value="Table" />
       </map>
     </option>
-    <option name="lastTimeChecked" value="1731218662145" />
+    <option name="lastTimeChecked" value="1731630652774" />
   </component>
 </project>
