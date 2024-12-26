@@ -19,13 +19,11 @@ import (
 	"time"
 )
 
-/*
-- ReadWriteLockStrategy 读写锁策略
-- 适用场景：
- 1. 单结点数据库
-    1.1. 其实多结点也可以使用，但是要求在更新线程对redis缓存做更新，这样就太消耗资源了
- 2. 典型读多写少场景
-*/
+// ReadWriteLockStrategy /* 适用场景：
+//
+//  1. 单结点数据库
+//     1.1. 其实多结点也可以使用，但是要求在更新线程对redis缓存做更新，这样就太消耗资源了
+//  2. 典型读多写少场景*/
 type ReadWriteLockStrategy struct {
 	sync.Once
 	sync.Mutex
@@ -51,7 +49,7 @@ func NewReadWriteLockStrategy(context Context) *ReadWriteLockStrategy {
 // init 依赖注入初始化 构造器模式
 func (rws *ReadWriteLockStrategy) init() {
 	rws.Do(func() {
-		log.Println("懒加载执行依赖注入～ ，单例加载")
+		log.Println("ReadWriteLockStrategy 懒加载执行依赖注入～ ，单例加载")
 		rws.redisClient = client.RedisInstance.Get(conf.Dft.Get())
 
 		rws.labelTreeService = impl.NewLabelTreeService()
@@ -247,7 +245,6 @@ func (rws *ReadWriteLockStrategy) tryGetReadLocalLock() bool {
 			return false
 		default:
 			time.Sleep(time.Millisecond * 100)
-			continue
 		}
 	}
 }
@@ -279,12 +276,6 @@ func (rws *ReadWriteLockStrategy) tryGetRedisLock(labelTreeLockKey string) (bool
 			return false, nil
 		default:
 			time.Sleep(time.Millisecond * 100)
-			continue
 		}
 	}
-}
-
-// updateLabelInformation 更新label的信息
-func (rws *ReadWriteLockStrategy) updateLabelInformation(labelTreeId int) {
-
 }

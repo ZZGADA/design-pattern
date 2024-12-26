@@ -22,7 +22,8 @@ func main() {
 	// 三种数据库同步redis缓存的形式
 	context := strategy.NewContext()
 	rwLockStrategy = strategy.NewReadWriteLockStrategy(context)
+	delayDoubleDeleteStrategy = strategy.NewDoubleDeleteStrategy(context)
 
-	context.SetStrategy(rwLockStrategy)
+	context.SetStrategy(delayDoubleDeleteStrategy)
 	context.Start()
 }

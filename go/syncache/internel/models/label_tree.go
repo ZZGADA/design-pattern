@@ -54,9 +54,9 @@ func (lt *LabelTreeMapper) GetAllLabelTree() []LabelTree {
 
 // GetById GetSpecificLabelTreeParentById 根据id查询指定一个label tree的父级信息
 func (lt *LabelTreeMapper) GetById(labelTreeId int) LabelTree {
-	var labelTree LabelTree
+	labelTree := LabelTree{}
 
-	lt.client.Where("id != ?", labelTreeId).Find(&labelTree)
+	lt.client.Where("id = ?", labelTreeId).Find(&labelTree)
 	return labelTree
 }
 
