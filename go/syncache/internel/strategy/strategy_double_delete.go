@@ -54,23 +54,33 @@ func (dds *DoubleDeleteStrategy) init() {
 func (dds *DoubleDeleteStrategy) run() {
 	log.Println("延时双删策略 开始 协程号：", utils.GetGoroutineID())
 
-	maxIteratorNum := 2000
+	maxIteratorNum := 33
+	stopStep := 10
 	wg := new(sync.WaitGroup)
 	for i := 0; i < maxIteratorNum; i++ {
 		wg.Add(1)
+
 		go func() {
 			defer wg.Done()
 
-			dds.kernelStrategyUpdate(context.Background(), 10)
-
+			labelTree, _ := dds.kernelStrategyQuery(context.Background(), 10)
+			log.Info(labelTree)
 		}()
+
+		if i == stopStep {
+			if err := dds.kernelStrategyUpdate(context.Background(), 10); err != nil {
+				log.Errorf("kernelStrategyUpdate error %#v", err)
+			} else {
+				log.Info("update success ,label tree name is ZZGDEA")
+			}
+		}
 	}
 	wg.Wait()
 	log.Println("延时双删策略 结束")
 }
 
 /*
-  - kernelStrategyUpdate 延时双删策略
+  - kernelStrategyQuery 延时双删 - 查询策略
     场景： 读多写少，只使用一个mysql实例情况下最佳，或者使用云厂商提供的成熟的mysql集群
 
     思路：
@@ -81,7 +91,8 @@ func (dds *DoubleDeleteStrategy) run() {
     4. 对于向阿里的polarDB这种数据库，主从延时极小，使用延时双删既可以简化代码，又不容易出错
     5. 额外注意一下⚠️：不能在事务中将mysql数据推入redis。因为MVCC的事务隔离机制，导致事务的select语句不会拿到最新的数据，而是一个快照。一旦将这个快照数据推入redis将直接导致脏数据的出现。
 */
-func (dds *DoubleDeleteStrategy) kernelStrategyUpdate(context context.Context, labelTreeId int) {
+func (dds *DoubleDeleteStrategy) kernelStrategyQuery(context context.Context, labelTreeId int) (labelTree models.LabelTree, err error) {
+	// 1. 查缓存
 	labelTreeRedisKey := fmt.Sprintf(define.DoubleDeleteKey, labelTreeId)
 	ex := dds.redisClient.Get(context, labelTreeRedisKey)
 	labelTreeVal := ex.Val()
@@ -89,11 +100,60 @@ func (dds *DoubleDeleteStrategy) kernelStrategyUpdate(context context.Context, l
 		log.Errorf("获取redis缓存失败 ， err：%#v", ex.Err())
 	}
 
+	// 2. 缓存不存在
+	// 多携程情况下 存在多携程查询redis key 不存在 导致大量请求进入mysql
 	if len(labelTreeVal) == 0 {
 		// value 不存在 就查数据入缓存
-		labelTree := dds.labelTreeDao.GetById(labelTreeId)
-		if marshal, err := json.Marshal(labelTree); err == nil {
-			dds.redisClient.SetEx(context, labelTreeRedisKey, string(marshal), time.Second*60)
+		labelTree = dds.labelTreeDao.GetById(labelTreeId)
+		if labelTreeJson, errM := json.Marshal(labelTree); errM == nil {
+			dds.redisClient.SetEx(context, labelTreeRedisKey, string(labelTreeJson), time.Second*60)
+		} else {
+			err = errM
 		}
+
+		log.Info("从数据库中拿数据 ")
+	} else {
+		// 3. 缓存存在
+		if err = json.Unmarshal([]byte(labelTreeVal), &labelTree); err != nil {
+			log.Errorf("label tree缓存解析成结构体失败 %#v", err)
+		}
+		log.Info("从缓存中拿数据 ")
 	}
+
+	return
+}
+
+/*
+- kernelStrategyUpdate 延时双删 - 更新策略
+思路：
+
+1. 更新数据库后删除redis缓存，然后间隔一段时间（主从库）的同步时间再删除缓存。
+2. 延时删除的意义在于 防止读操作将从库的老数据读入缓存中。
+*/
+func (dds *DoubleDeleteStrategy) kernelStrategyUpdate(context context.Context, labelTreeId int) (err error) {
+	// 1. 更新数据库
+	labelTree := dds.labelTreeDao.GetById(labelTreeId)
+	labelTree.Name = "ZZGEDA"
+	if err = dds.labelTreeService.UpdateSpecificLabelTreeById(labelTree, service.LabelName); err != nil {
+		log.Errorf("label tree 更新失败 ，labelTree ：%#v  error: %#v", labelTree, err)
+		return
+	}
+
+	// 2. 删除缓存
+	labelTreeRedisKey := fmt.Sprintf(define.DoubleDeleteKey, labelTreeId)
+	delRes := dds.redisClient.Del(context, labelTreeRedisKey)
+	if delRes.Err() != nil && !errors.Is(delRes.Err(), redis.Nil) {
+		log.Errorf("redis 缓存删除失败，labelTree id :%#v,err：%#v ", labelTreeId, delRes.Err())
+		return
+	}
+
+	// 3. 延时双删
+	time.Sleep(define.Delay1Second)
+	delResDouble := dds.redisClient.Del(context, labelTreeRedisKey)
+	if delResDouble.Err() != nil && !errors.Is(delRes.Err(), redis.Nil) {
+		log.Errorf("redis 缓存删除失败，labelTree id :%#v,err：%#v ", labelTreeId, delResDouble.Err())
+		return
+	}
+
+	return
 }
