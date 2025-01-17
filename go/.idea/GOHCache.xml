@@ -201,6 +201,13 @@
             </set>
           </value>
         </entry>
+        <entry key="DoubleDeleteStrategy">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_double_delete.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="Facade">
           <value>
             <set>
@@ -1172,6 +1179,20 @@
             </ScannedPath>
           </value>
         </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/define/double_deleted_key.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1735260602722" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/define/redis_key.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1735210374138" />
+            </ScannedPath>
+          </value>
+        </entry>
         <entry key="file://$PROJECT_DIR$/syncache/internel/client/mysql.go">
           <value>
             <ScannedPath>
@@ -1199,7 +1220,7 @@
         <entry key="file://$PROJECT_DIR$/syncache/internel/models/label_tree.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1729481140087" />
+              <option name="lastModified" value="1735211339166" />
               <option name="schema">
                 <list>
                   <option value="LabelTreeMapper" />
@@ -1290,6 +1311,18 @@
             </ScannedPath>
           </value>
         </entry>
+        <entry key="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_double_delete.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1735263034530" />
+              <option name="schema">
+                <list>
+                  <option value="DoubleDeleteStrategy" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
         <entry key="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_mq_asy.go">
           <value>
             <ScannedPath>
@@ -1305,7 +1338,7 @@
         <entry key="file://$PROJECT_DIR$/syncache/internel/strategy/strategy_rwlock.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1729498344476" />
+              <option name="lastModified" value="1735202689655" />
               <option name="schema">
                 <list>
                   <option value="ReadWriteLockStrategy" />
@@ -1336,7 +1369,7 @@
         <entry key="file://$PROJECT_DIR$/syncache/main/main.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1729387428154" />
+              <option name="lastModified" value="1735202654437" />
             </ScannedPath>
           </value>
         </entry>
@@ -1380,6 +1413,7 @@
         <entry key="delay_double_delete_strategy" value="DelayDoubleDeleteStrategy" />
         <entry key="dft" value="dft" />
         <entry key="director" value="Director" />
+        <entry key="double_delete_strategy" value="DoubleDeleteStrategy" />
         <entry key="facade" value="Facade" />
         <entry key="factory_producer" value="FactoryProducer" />
         <entry key="fly_weight_factory" value="FlyWeightFactory" />
@@ -1428,6 +1462,6 @@
         <entry key="table" value="Table" />
       </map>
     </option>
-    <option name="lastTimeChecked" value="1731630652774" />
+    <option name="lastTimeChecked" value="1737077531689" />
   </component>
 </project>
