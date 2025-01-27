@@ -462,6 +462,20 @@
             </set>
           </value>
         </entry>
+        <entry key="Result">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviourtype/workerpool/main/main.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RoutinePool">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviourtype/workerpool/main/main.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="SequentialIORefined">
           <value>
             <set>
@@ -529,6 +543,13 @@
           <value>
             <set>
               <option value="file://$PROJECT_DIR$/creationaltype/abstractfactory/product.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Task">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/behaviourtype/workerpool/main/main.go" />
             </set>
           </value>
         </entry>
@@ -742,6 +763,20 @@
                 <list>
                   <option value="CashPayStrategy" />
                   <option value="CreditPayStrategy" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/behaviourtype/workerpool/main/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1737777034569" />
+              <option name="schema">
+                <list>
+                  <option value="Task" />
+                  <option value="Result" />
+                  <option value="RoutinePool" />
                 </list>
               </option>
             </ScannedPath>
@@ -1450,6 +1485,8 @@
         <entry key="redis_config" value="RedisConfig" />
         <entry key="redis_label_tree_data_temp" value="RedisLabelTreeDataTemp" />
         <entry key="remote_invoker" value="RemoteInvoker" />
+        <entry key="result" value="Result" />
+        <entry key="routine_pool" value="RoutinePool" />
         <entry key="sequential_io_refined" value="SequentialIORefined" />
         <entry key="simple_factory" value="SimpleFactory" />
         <entry key="singleton" value="Singleton" />
@@ -1460,8 +1497,9 @@
         <entry key="structure_b" value="StructureB" />
         <entry key="structure_c" value="StructureC" />
         <entry key="table" value="Table" />
+        <entry key="task" value="Task" />
       </map>
     </option>
-    <option name="lastTimeChecked" value="1737077531689" />
+    <option name="lastTimeChecked" value="1737979273520" />
   </component>
 </project>
