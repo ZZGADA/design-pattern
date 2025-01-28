@@ -28,3 +28,6 @@ hub上，让你免去搭建环境的痛苦😖。
 &nbsp;&nbsp; 快点进来吧！！！➡️👍[慢SQL排查和优化，带你走进索引](./go/slowapiandsql/READE.md)
 
 --- 
+## 项目顺利提测
+&nbsp;&nbsp; 第一次完整参与了整个项目的完整开发和落地，并负责了几个模块的开发，感触颇深，想和你一起分享。    
+&nbsp;&nbsp; 项目感悟 👉👉👉👉👉👉 [提测顺利～～～](https://github.com/ZZGADA/PersonalGrowthBiography/blob/main/2024/12/1223.md)
