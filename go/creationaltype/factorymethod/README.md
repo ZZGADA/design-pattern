@@ -79,4 +79,31 @@ class Test{
 3. 我们再在上面的基础上做一个拓展，spring默认是单例的，如果不使用工厂方法这种模式，同一个productA实例可能将同时存在多个单例的bean中，然后无法gc，最终变为老年代的。虽然不会造成内存的泄漏但是也白白占用了我们宝贵的内存资源啊。
    如果这个productA的成员变量是一些基础类型倒还行，但是如果维护的是一个TCP连接呢？是一个数据库连接呢？是多个嵌套的其他类呢？
     * 内存在哭泣😭😭😭😭😭
+
+
+
+4. go使用闭包构建工厂的例子
+```go
+package main
+
+import "fmt"
+
+func multiplier(factor int) func(int) int {
+    return func(x int) int {
+        return x * factor
+    }
+}
+
+// 在这个例子中，multiplier 函数返回了一个匿名函数，该匿名函数根据传入的 factor 参数来乘以输入的值。
+func main() {
+    double := multiplier(2)
+    triple := multiplier(3)
+
+    fmt.Println(double(5)) // 输出: 10
+    fmt.Println(triple(5)) // 输出: 15
+}
+
+
+
+```
    
