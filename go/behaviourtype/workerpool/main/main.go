@@ -91,10 +91,10 @@ func main() {
 	// 初始化任务队列中的任务数量（起模拟作用 ）
 	// 初始化 worker数量
 	const (
-		taskNum   = 1000
+		taskNum   = 500
 		workerNum = 100
 	)
-
+	
 	// 初始化 待消费任务队列 结果队列
 	taskChan := make(chan Task)
 	resultChan := make(chan Result)
