@@ -31,7 +31,7 @@ func init() {
 	strategyService = &StrategyService{}
 }
 
-// init service 实例化
+// init proto 实例化
 func (s *StrategyService) init() service.StrategyService {
 	// 单例模式
 	s.Do(func() {
@@ -96,7 +96,7 @@ func (s *StrategyService) PushAllLabelTreeAllParent() (map[int]string, error) {
 }
 
 /*
-UpdateSpecificLabelTreeById  根据label 的id更新label的信息 调用 label_tree service
+UpdateSpecificLabelTreeById  根据label 的id更新label的信息 调用 label_tree proto
 
 	更新数据库 然后将redis的key删除掉
 	因为加锁了 ，两个删除key的操作是互补影响的所以直接并行执行 并执行重试操作

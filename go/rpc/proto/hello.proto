@@ -1,0 +1,35 @@
+// 使用proto3语法
+syntax = "proto3";
+// 生成的go文件在哪个目录哪个包中, '.'代表在当前且录, proto代表了包名
+// option go_package = "<导入路径>;<包名>"
+// 分号前的 . 表示生成的 Go 代码的导入路径为当前目录（即与 proto 文件同级目录）。如果需要指定其他路径，可以写成具体的相对路径或绝对路径，例如 ./gen 表示当前目录下的 gen 文件夹。
+// 分号后的 proto 表示生成的 Go 代码的包名为 proto，即代码中会有 package proto 的声明。
+option go_package = ".;proto";
+
+
+
+// 定义RPC服务及其中的方法
+service SayHello {
+  rpc SayHello(HelloRequest) returns (HelloResponse) {}
+}
+// 定义消息体
+message HelloRequest {
+  string requestName = 1;
+}
+message HelloResponse {
+  string responseMsg = 1;
+}
+
+
+//# 根据.proto文件生成Go语言的数据结构代码（序列化/反序列化相关）
+//protoc --go_out=. hello.proto
+
+
+//# 根据.proto文件生成Go语言的gRPC服务端和客户端代码（需要文件内定义了service）
+//protoc --go-grpc_out=. hello. proto
+
+/** 结合上述的完整指令
+protoc --go_out=. --go_opt=paths=source_relative \
+    --go-grpc_out=. --go-grpc_opt=paths=source_relative \
+    hello.proto
+ */

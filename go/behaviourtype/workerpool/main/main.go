@@ -94,7 +94,7 @@ func main() {
 		taskNum   = 500
 		workerNum = 100
 	)
-	
+
 	// 初始化 待消费任务队列 结果队列
 	taskChan := make(chan Task)
 	resultChan := make(chan Result)
